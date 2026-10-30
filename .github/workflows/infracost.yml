@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout Base Branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.base.ref }}
 
@@ -30,7 +30,7 @@ jobs:
         continue-on-error: true
 
       - name: Checkout PR Branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Generate Infracost PR Diff
         run: |
